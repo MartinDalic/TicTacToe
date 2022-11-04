@@ -1,0 +1,17 @@
+:root {
+    --border-radius: 10px;
+    --padding-left: 150px;
+    --padding-right: 180px;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}

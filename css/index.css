@@ -1,0 +1,57 @@
+/*****************************
+ *  Headlines  & text        *
+******************************/
+
+/*****************************
+ *  Gallery  (all images)    *
+******************************/
+
+
+/*****************************
+ *  Site     Structre)       *
+******************************/
+/* ------------------------- 
+   Section: Startseite */
+
+
+/* End of section: Startseite 
+   ===============================*/
+
+
+
+/******************************************
++ JUST FOR SMARTPHONES
+/******************************************/
+
+@media (max-width: 414px) {
+
+    body {
+
+        /*scrollbar ausblenden*/
+        -ms-overflow-style: none;
+
+        /* for Internet Explorer, Edge */
+        scrollbar-width: none;
+        /* for Firefox */
+        overflow-y: scroll;
+    }
+
+    /*scrollbar ausblenden*/
+    body::-webkit-scrollbar {
+        display: none;
+        /* for Chrome, Safari, and Opera */
+    }
+
+    
+    /*  Headlines | GENERAL CLASSES       
+    *=============================*/
+    
+    /*  Site     (Structre) 
+    *=============================*/
+    
+
+}
+
+/******************************************
++ END of JUST FOR SMARTPHONES
+/******************************************/

@@ -1,42 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>TicTacToe</title>
 
     <!-- FAVICON -->
     <!-- <link rel="icon" href="./img/icons/favicon.ico" type="image/x-icon"> -->
     <!-- <link rel="icon" href="./img/icons/favicon.png" type="image/png" sizes="32x32"> -->
-    <link rel="icon" href="./img/icons/favicon-32x32_blue.png" type="image/png" sizes="32x32">
+    <link
+      rel="icon"
+      href="./img/icons/favicon-32x32_blue.png"
+      type="image/png"
+      sizes="32x32"
+    />
 
     <!-- Cascading Style Sheets -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/fonts_raleway.css">
-    
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/fonts_raleway.css" />
+
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/3f31cbef9c.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/3f31cbef9c.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- JavaScript -->
     <script src="./scripts/script.js"></script>
     <script src="./scripts/app.js"></script>
+  </head>
 
-</head>
-
-<body onload="start()">
+  <!-- <body onload="start()"> -->
+  <body>
     <!-- HEADER -->
     <!-- <div w3-include-html="./templates/header.html"></div> -->
+    <img class="game-over d-none" id="game-over" src="./img/game-over.png">
 
-    <div id="content">
+    <button id="restart-btn" class="restart-btn d-none" onclick="restart()">Restart</button>
 
+    <div class="player-panel">
+      <div class="player-inactive" id="player-1">
+        <img class="" src="img/circle.png" />Player 1
+      </div>
+      <div class="" id="player-2">
+        <img class="" src="img/cross.png" />Player 2
+      </div>
     </div>
+
+    <div id="line-1" class="horizontal-line" style="top: 12.75rem;"></div>
+    <div id="line-2" class="horizontal-line" style="top: 21.50rem;"></div>
+    <div id="line-3" class="horizontal-line" style="top: 30.25rem;"></div>
+    <div id="line-4" class="horizontal-line make-vertical" style="top:21.5rem; left: 36.25rem;"></div>
+    <div id="line-5" class="horizontal-line make-vertical" style="top:21.5rem; left: 45.0rem;"></div>
+    <div id="line-6" class="horizontal-line make-vertical" style="top:21.5rem; left: 53.625rem;"></div>
+    <div id="line-7" class="horizontal-line spin-45deg" style="top:21.5rem; transform: rotate(45deg) scaleX(0.0); width: 25rem;"></div>
+    <div id="line-8" class="horizontal-line spin-45deg" style="top:21.5rem; transform: rotate(-45deg) scaleX(0.0); width: 25rem; right: 41rem;"></div>
+    
+    <table>
+      <tr>
+        <td onclick="fillShape(0)">
+          <img id="circle-0" class="shape d-none" src="img/circle.png" />
+          <img id="cross-0" class="shape d-none" src="img/cross.png" />
+        </td>
+        <td onclick="fillShape(1)">
+          <img id="circle-1" class="shape d-none" src="img/circle.png" />
+          <img id="cross-1" class="shape d-none" src="img/cross.png" />
+        </td>
+        <td onclick="fillShape(2)">
+          <img id="circle-2" class="shape d-none" src="img/circle.png" />
+          <img id="cross-2" class="shape d-none" src="img/cross.png" />
+        </td>
+      </tr>
+      <tr>
+        <td onclick="fillShape(3)">
+          <img id="circle-3" class="shape d-none" src="img/circle.png" />
+          <img id="cross-3" class="shape d-none" src="img/cross.png" />
+        </td>
+        <td onclick="fillShape(4)">
+          <img id="circle-4" class="shape d-none" src="img/circle.png" />
+          <img id="cross-4" class="shape d-none" src="img/cross.png" />
+        </td>
+        <td onclick="fillShape(5)">
+          <img id="circle-5" class="shape d-none" src="img/circle.png" />
+          <img id="cross-5" class="shape d-none" src="img/cross.png" />
+        </td>
+      </tr>
+      <tr>
+        <td onclick="fillShape(6)">
+          <img id="circle-6" class="shape d-none" src="img/circle.png" />
+          <img id="cross-6" class="shape d-none" src="img/cross.png" />
+        </td>
+        <td onclick="fillShape(7)">
+          <img id="circle-7" class="shape d-none" src="img/circle.png" />
+          <img id="cross-7" class="shape d-none" src="img/cross.png" />
+        </td>
+        <td onclick="fillShape(8)">
+          <img id="circle-8" class="shape d-none" src="img/circle.png" />
+          <img id="cross-8" class="shape d-none" src="img/cross.png" />
+        </td>
+      </tr>
+    </table>
+
+    <div id="content"></div>
 
     <!-- FOOTER -->
     <!-- <div w3-include-html="./templates/footer.html"></div> -->
-</body>
-
+  </body>
 </html>
